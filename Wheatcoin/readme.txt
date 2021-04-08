@@ -1,12 +1,12 @@
 This project has two components.
 
 **hasher**
-The hasher program will take an input file containing up to one million characters, add a randomly generated six-digit number to the string, and then count from zero to 999,999. Each time it counts, it will add the counted number to the string, and then hash the string using SHA-256. (The SHA-256 code was provided by my professor.) The program will then count how many zeros are at the front of the hashed string's binary representation. If the number of zeros is equal to or greater than a user-inputted amount, the program will terminate and output the string that produced the correct hash to a file. If the number of zeros is invalid, it will continue counting to 999,999. Each increase in the count will produce a new hash. If after one million attempts this still does not produce the desired hash, the program will generate a new random number and count to 999,999 again. This process repeats until the program generates a hash with the desired number of zeros at its beginning.
+The hasher program will take an input file containing up to one million characters, add a randomly generated six-digit number to the string, and then count from zero to 999,999. Each time it counts, it will add the counted number to the string, and then hash the string using SHA-256. (The SHA-256 code was provided by my professor.) The program will then count how many zeroes are at the front of the hashed string's binary representation. If the number of zeroes is equal to or greater than a user-inputted amount, the program will terminate and output the string that produced the correct hash to a file. If the number of zeroes is invalid, it will continue counting to 999,999. Each increase in the count will produce a new hash. If after one million attempts this still does not produce the desired hash, the program will generate a new random number and count to 999,999 again. This process repeats until the program generates a hash with the desired number of zeroes at its beginning.
 The program takes 3 command line arguments:
 The first argument is the input text file.
 The second argument is the output text file. The program will create this if it doesn't exist or overwrite it if it does.
 The third argument is the number of zeroes to search for in the hash.
-For example, if the user wants to find a string that generates a hash with 25 zeros at the beginning and stores it in a file called "zeroHash.txt" they would input the following:
+For example, if the user wants to find a string that generates a hash with 25 zeroes at the beginning and stores it in a file called "zeroHash.txt" they would input the following:
 ./hasher input.txt zeroHash.txt 25
 
 **main**
